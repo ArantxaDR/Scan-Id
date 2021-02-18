@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Idbg from "../styles/assets/ID bg.svg";
+import "../styles/_GetUserMedia.scss";
 
 const GetUserMedia = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
