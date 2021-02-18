@@ -1,7 +1,7 @@
 import React from "react";
 //components
 import Header from "./Header";
-import ScanEmpty from "./ScanEmpty";
+import GetUserMedia from "./GetUserMedia";
 import "../styles/App.scss";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
 
-      <ScanEmpty />
+      <GetUserMedia />
     </>
   );
 }
