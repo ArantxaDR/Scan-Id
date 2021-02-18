@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="217px" height="124px" viewBox="0 0 217 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 61 (101010) - https://sketch.com -->
+    <title>A45708E7-8B8D-419A-913B-9EB89C38A56F</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="📱-Mobile----Default" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Scan----Empty" transform="translate(-76.000000, -226.000000)" fill="#F3F2F4">
+            <g id="Card-frame-/-Empty" transform="translate(58.000000, 208.000000)">
+                <g id="ID-bg" transform="translate(18.000000, 18.000000)">
+                    <path d="M69,0 C73.418278,-8.11624501e-16 77,3.581722 77,8 L77,83 C77,87.418278 73.418278,91 69,91 L8,91 C3.581722,91 4.09379668e-15,87.418278 0,83 L0,8 C-5.41083001e-16,3.581722 3.581722,8.11624501e-16 8,0 L69,0 Z M38.5,68 C25.8763819,68 14.7097152,69.4097507 5,72.2292521 L5,72.2292521 L5,81 C5,83.7614237 7.23857625,86 10,86 L10,86 L67,86 C69.7614237,86 72,83.7614237 72,81 L72,81 L72,72.2292521 C62.2902848,69.4097507 51.1236181,68 38.5,68 Z M38.5,9 C22.0753469,9 17,21.0213084 17,34 C17,46.9786916 25.5213084,63 38.5,63 C51.4786916,63 60,46.9786916 60,34 C60,21.0213084 54.9246531,9 38.5,9 Z" id="Combined-Shape"></path>
+                    <rect id="Rectangle" x="92" y="0" width="125" height="10" rx="5"></rect>
+                    <rect id="Rectangle" x="92" y="114" width="101" height="10" rx="5"></rect>
+                    <rect id="Rectangle" x="0" y="114" width="77" height="10" rx="5"></rect>
+                    <rect id="Rectangle" x="92" y="24" width="43" height="10" rx="5"></rect>
+                    <rect id="Rectangle" x="92" y="58" width="77" height="10" rx="5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
