@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import alert from "../styles/assets/Alert.svg";
 
 const FitPicture = () => {
@@ -16,6 +17,9 @@ const FitPicture = () => {
         <img src={alert} alt="Icon" />
         Room lighting is too low
       </p>
+      <Link to="/" className="home_link" title="Home l">
+        <p className="home_link__text">Home </p>
+      </Link>
     </>
   );
 };

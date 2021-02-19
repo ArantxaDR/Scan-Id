@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
 //components
 import Header from "./Header";
 
@@ -8,19 +9,23 @@ function App() {
   return (
     <>
       <Header />
-
-      <main className="main">
-        <h2 className="main-title">Scan your ID</h2>
-        <p className="main-title__text">
-          Take a picture. It may take time to validate your personal
-          information.
-        </p>
-        <div className="ID">
-          <div className="ID-container">
-            <button className="btn">Take picture</button>
+      <Route exact path="/">
+        <main className="main">
+          <h2 className="main-title">Scan your ID</h2>
+          <p className="main-title__text">
+            Take a picture. It may take time to validate your personal
+            information.
+          </p>
+          <div className="ID">
+            <div className="ID-container">
+              <button className="btn">Take picture</button>
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </Route>
+      <Switch>
+        <Route path="/take-photo/" render={renderTakePhoto} />
+      </Switch>
     </>
   );
 }
