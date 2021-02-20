@@ -1,9 +1,10 @@
 import React, { useRef, useState, useCallback, useEffect } from "react";
-import WebCam from "react-webcam";
-import api from "../services/Api";
 import { Link } from "react-router-dom";
 import "../styles/_TakePhoto.scss";
 import alert from "../styles/assets/Alert.svg";
+import WebCam from "react-webcam";
+import api from "../services/Api";
+import { withRouter } from "react-router-dom";
 
 const TakePhoto = (props: any) => {
   const [borderPictureCss, setBorderPictureCss] = useState<string>("");
@@ -33,7 +34,7 @@ const TakePhoto = (props: any) => {
 
   const validatePhoto = (intervalId: ReturnType<typeof setInterval>) => {
     api().then((data: string) => {
-      if (data === "Approved") {
+      if (data == "Approved") {
         clearInterval(intervalId);
         setBorderPictureCss("approved");
         props.setPictureStatus("approved");
@@ -74,4 +75,4 @@ const TakePhoto = (props: any) => {
     </>
   );
 };
-export default TakePhoto;
+export default withRouter(TakePhoto);
