@@ -43,12 +43,19 @@
   filter: blur(100px) brightness(10px);
 }
 .camera-container {
+  border-radius: 12px;
   &__alert {
     position: relative;
     height: 50px;
     width: 280px;
     text-align: center;
   }
+}
+.approved {
+  border: 2px solid $colorsucces;
+}
+.rejected {
+  border: 2px solid $colorreject;
 }
 .cancel {
   position: relative;
@@ -65,7 +72,4 @@
   margin-bottom: 48px;
   text-transform: uppercase;
   text-decoration: none;
-}
-.canvas {
-  display: none;
 }

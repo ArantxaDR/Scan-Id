@@ -34,7 +34,7 @@ const TakePhoto = (props: any) => {
 
   const validatePhoto = (intervalId: ReturnType<typeof setInterval>) => {
     api().then((data: string) => {
-      if (data == "Approved") {
+      if (data === "Approved") {
         clearInterval(intervalId);
         setBorderPictureCss("approved");
         props.setPictureStatus("approved");
