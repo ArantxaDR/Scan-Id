@@ -1,0 +1,71 @@
+@import "./core/variables";
+
+.container {
+  height: 100vh;
+  background-image: url(./assets/devices.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $colorsecondary;
+  position: relative;
+
+  &-title {
+    position: relative;
+    margin-top: 100px;
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 24px;
+    text-align: center;
+    position: relative;
+    &__text {
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 24px;
+      text-align: center;
+      margin-top: 16px;
+      margin-bottom: 100px;
+      position: relative;
+    }
+  }
+}
+.container::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(20, 28, 38, 0.75);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(100px) brightness(10px);
+}
+.camera-container {
+  &__alert {
+    position: relative;
+    height: 50px;
+    width: 280px;
+    text-align: center;
+  }
+}
+.cancel {
+  position: relative;
+  height: 24px;
+  width: 66.5px;
+  color: $colorsecondary;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.35px;
+  line-height: 24px;
+  text-align: center;
+  padding-top: 170px;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.canvas {
+  display: none;
+}
