@@ -6,7 +6,6 @@ import TakePhoto from "./TakePhoto";
 import idBg from "../styles/assets/IDbg.svg";
 
 function App() {
-  const [btnMessage, setBtnMessage] = useState<string>("Take picture");
   const [pictureStatus, setPictureStatus] = useState<string>("");
   const [imgSrc, setImgSrc] = useState<string>(idBg);
 
@@ -17,11 +16,7 @@ function App() {
           exact
           path="/"
           render={(routerProps) => (
-            <ScanID
-              btnMessage={btnMessage}
-              pictureStatus={pictureStatus}
-              imgSrc={imgSrc}
-            />
+            <ScanID pictureStatus={pictureStatus} imgSrc={imgSrc} />
           )}
         />
 
@@ -29,7 +24,7 @@ function App() {
           path="/take-photo/"
           render={(routerProps) => (
             <TakePhoto
-              setBtnMessage={setBtnMessage}
+              pictureStatus={pictureStatus}
               setPictureStatus={setPictureStatus}
               setImgSrc={setImgSrc}
             />

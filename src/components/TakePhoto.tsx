@@ -8,7 +8,7 @@ import { withRouter } from "react-router-dom";
 
 const TakePhoto = (props: any) => {
   const [borderPictureCss, setBorderPictureCss] = useState<string>("");
-
+  const [iconCss, seticonCss] = useState<string>("hiden");
   const webcamRef = useRef<WebCam>(null);
 
   useEffect(() => {
@@ -29,20 +29,21 @@ const TakePhoto = (props: any) => {
         props.setImgSrc(imageSrc);
         validatePhoto(intervalId);
       }
-    }, 1000);
+    }, 1100);
   }, [webcamRef, props.setImgSrc]);
 
   const validatePhoto = (intervalId: ReturnType<typeof setInterval>) => {
     api().then((data: string) => {
       if (data === "Approved") {
         clearInterval(intervalId);
+        seticonCss("hiden");
         setBorderPictureCss("approved");
         props.setPictureStatus("approved");
         props.history.push("/");
       } else {
+        seticonCss("camera-container__alert");
         setBorderPictureCss("rejected");
         props.setPictureStatus("rejected");
-        props.setBtnMessage("Retake picture");
       }
     });
   };
@@ -64,7 +65,7 @@ const TakePhoto = (props: any) => {
           width={260}
           videoConstraints={videoConstraints}
         />
-        <p className="camera-container__alert">
+        <p className={iconCss}>
           <img src={alert} alt="Icon" />
           Room lighting is too low
         </p>
