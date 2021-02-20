@@ -2,10 +2,13 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 //components
 import Header from "./Header";
-
+import TakePhoto from "./TakePhoto";
 import "../styles/App.scss";
 
 function App() {
+  const renderTakePhoto = () => {
+    return <TakePhoto />;
+  };
   return (
     <>
       <Header />
