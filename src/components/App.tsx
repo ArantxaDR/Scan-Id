@@ -1,30 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 //components
-import Header from "./Header";
-
-import "../styles/App.scss";
+import ScanID from "./ScanID";
+import TakePhoto from "./TakePhoto";
+import idBg from "../styles/assets/IDbg.svg";
 
 function App() {
+  const [btnMessage, setBtnMessage] = useState<string>("Take picture");
+  const [pictureStatus, setPictureStatus] = useState<string>("");
+  const [imgSrc, setImgSrc] = useState<string>(idBg);
+
   return (
     <>
-      <Header />
-      <Route exact path="/">
-        <main className="main">
-          <h2 className="main-title">Scan your ID</h2>
-          <p className="main-title__text">
-            Take a picture. It may take time to validate your personal
-            information.
-          </p>
-          <div className="ID">
-            <div className="ID-container">
-              <button className="btn">Take picture</button>
-            </div>
-          </div>
-        </main>
-      </Route>
       <Switch>
-        <Route path="/take-photo/" render={renderTakePhoto} />
+        <Route
+          exact
+          path="/"
+          render={(routerProps) => (
+            <ScanID
+              btnMessage={btnMessage}
+              pictureStatus={pictureStatus}
+              imgSrc={imgSrc}
+            />
+          )}
+        />
+
+        <Route
+          path="/take-photo/"
+          render={(routerProps) => (
+            <TakePhoto
+              setBtnMessage={setBtnMessage}
+              setPictureStatus={setPictureStatus}
+              setImgSrc={setImgSrc}
+            />
+          )}
+        />
       </Switch>
     </>
   );
