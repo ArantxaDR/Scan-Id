@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import "../styles/App.scss";
 import "../styles/_ScanID.scss";
+import check from "../styles/assets/check.svg";
+import fail from "../styles/assets/fail.svg";
 import { Link } from "react-router-dom";
 
 export default function ScanID(props: any) {
@@ -50,7 +52,13 @@ export default function ScanID(props: any) {
             <Link to="/take-photo" title="takephoto" className={linkCss}>
               <button className="link-btn">{btnMessage}</button>
             </Link>
-            <div className={labelCss}>{props.pictureStatus}</div>
+            <div className={labelCss}>
+              <img
+                src={props.pictureStatus === "ACCEPTED" ? check : fail}
+                alt={props.pictureStatus}
+              />
+              <span>{props.pictureStatus}</span>
+            </div>
           </div>
         </div>
       </main>

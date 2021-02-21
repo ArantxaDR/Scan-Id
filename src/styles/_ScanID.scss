@@ -36,7 +36,7 @@
   height: 160px;
   width: 260px;
   border-radius: 12px;
-  background-color: #ffffff;
+  background-color: $colorsecondary;
   box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.15);
   padding: 18px;
   &-container {
@@ -78,13 +78,18 @@
   text-transform: uppercase;
   margin-top: 160px;
   margin-left: 150px;
-  padding: 5px 0 5px 0;
-  color: white;
+  margin-right: 24px;
+  color: $colorsecondary;
   font-weight: bold;
   text-align: center;
   height: 30px;
   width: 102px;
   border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 0.75px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
 }
 .labelaccepted {
   background-color: $colorsucces;

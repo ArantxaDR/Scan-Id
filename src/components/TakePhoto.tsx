@@ -67,7 +67,7 @@ const TakePhoto = (props: any) => {
           videoConstraints={videoConstraints}
         />
         <p className={iconCss}>
-          <img src={alert} alt="Icon" />
+          <img src={alert} alt="Alert" />
           Room lighting is too low
         </p>
         <Link to="/" className=" cancel " title="Home l">
