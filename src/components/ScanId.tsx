@@ -1,26 +1,32 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
+import "../styles/App.scss";
 import "../styles/_ScanID.scss";
 import { Link } from "react-router-dom";
 
 export default function ScanID(props: any) {
+  const [borderPictureCss, setBorderPictureCss] = useState<string>("");
   const [linkCss, setLinkCss] = useState<string>("link");
   const [btnMessage, setBtnMessage] = useState<string>("Take picture");
+  const [labelCss, setLabelCss] = useState<string>("hiden");
 
   useEffect(() => {
     evaluatePictureStatus();
   });
 
   const evaluatePictureStatus = () => {
-    console.log(props.pictureStatus);
     if (props.pictureStatus === "") {
       setLinkCss("link");
       setBtnMessage("Take picture");
     } else if (props.pictureStatus === "ACCEPTED") {
+      setBorderPictureCss("accepted");
       setLinkCss("hiden");
+      setLabelCss("label labelaccepted");
     } else if (props.pictureStatus === "REJECTED") {
       setBtnMessage("Retake picture");
+      setBorderPictureCss("rejected");
       setLinkCss("link");
+      setLabelCss("label labelrejected");
     }
   };
 
@@ -36,7 +42,7 @@ export default function ScanID(props: any) {
         <div className="ID">
           <div className="ID-container">
             <img
-              className="ID-container__img"
+              className={`${borderPictureCss} ID-container__img`}
               src={props.imgSrc}
               title="picture"
               alt=""
@@ -44,6 +50,7 @@ export default function ScanID(props: any) {
             <Link to="/take-photo" title="takephoto" className={linkCss}>
               <button className="link-btn">{btnMessage}</button>
             </Link>
+            <div className={labelCss}>{props.pictureStatus}</div>
           </div>
         </div>
       </main>

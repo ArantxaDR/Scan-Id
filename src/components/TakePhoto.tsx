@@ -1,6 +1,7 @@
 import React, { useRef, useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/_TakePhoto.scss";
+import "../styles/App.scss";
 import alert from "../styles/assets/Alert.svg";
 import WebCam from "react-webcam";
 import api from "../services/Api";
@@ -29,7 +30,7 @@ const TakePhoto = (props: any) => {
         props.setImgSrc(imageSrc);
         validatePhoto(intervalId);
       }
-    }, 1100);
+    }, 1500);
   }, [webcamRef, props.setImgSrc]);
 
   const validatePhoto = (intervalId: ReturnType<typeof setInterval>) => {

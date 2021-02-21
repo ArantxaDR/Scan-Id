@@ -72,3 +72,24 @@
 .hiden {
   display: none;
 }
+
+.label {
+  position: absolute;
+  text-transform: uppercase;
+  margin-top: 160px;
+  margin-left: 150px;
+  padding: 5px 0 5px 0;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  height: 30px;
+  width: 102px;
+  border-radius: 4px;
+}
+.labelaccepted {
+  background-color: $colorsucces;
+}
+
+.labelrejected {
+  background-color: $colorreject;
+}
