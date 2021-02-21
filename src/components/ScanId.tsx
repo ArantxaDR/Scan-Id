@@ -56,6 +56,7 @@ export default function ScanID(props: any) {
               <img
                 src={props.pictureStatus === "ACCEPTED" ? check : fail}
                 alt={props.pictureStatus}
+                data-testid="icon"
               />
               <span>{props.pictureStatus}</span>
             </div>
