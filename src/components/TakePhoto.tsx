@@ -37,13 +37,13 @@ const TakePhoto = (props: any) => {
       if (data === "Approved") {
         clearInterval(intervalId);
         seticonCss("hiden");
-        setBorderPictureCss("approved");
-        props.setPictureStatus("approved");
+        setBorderPictureCss("accepted");
+        props.setPictureStatus("ACCEPTED");
         props.history.push("/");
       } else {
         seticonCss("camera-container__alert");
         setBorderPictureCss("rejected");
-        props.setPictureStatus("rejected");
+        props.setPictureStatus("REJECTED");
       }
     });
   };
@@ -57,7 +57,7 @@ const TakePhoto = (props: any) => {
           automatically.
         </p>
         <WebCam
-          className={borderPictureCss}
+          className={`${borderPictureCss} camera-container`}
           audio={false}
           height={160}
           ref={webcamRef}

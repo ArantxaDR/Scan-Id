@@ -16,9 +16,9 @@ export default function ScanID(props: any) {
     if (props.pictureStatus === "") {
       setLinkCss("link");
       setBtnMessage("Take picture");
-    } else if (props.pictureStatus === "approved") {
+    } else if (props.pictureStatus === "ACCEPTED") {
       setLinkCss("hiden");
-    } else if (props.pictureStatus === "rejected") {
+    } else if (props.pictureStatus === "REJECTED") {
       setBtnMessage("Retake picture");
       setLinkCss("link");
     }
