@@ -8,3 +8,7 @@
   border: 5px solid $colorreject;
   border-radius: 10px;
 }
+
+.mirror {
+  transform: rotateY(180deg);
+}

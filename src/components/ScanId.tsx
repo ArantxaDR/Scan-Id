@@ -44,7 +44,7 @@ export default function ScanID(props: any) {
         <div className="ID">
           <div className="ID-container">
             <img
-              className={`${borderPictureCss} ID-container__img`}
+              className={`${borderPictureCss} ID-container__img mirror`}
               src={props.imgSrc}
               title="picture"
               alt=""
