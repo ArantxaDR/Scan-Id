@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import ScanId from "../components/ScanId";
 import idBg from "../styles/assets/IDbg.svg";
 import { HashRouter } from "react-router-dom";
