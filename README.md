@@ -7,6 +7,8 @@ Create an app wich verify an ID through web camera and gives you an :+1: or :thu
 - React
 - Typescript
 - Sass
+- Api-rest
+- npm
 
 ## Screenshots
 
