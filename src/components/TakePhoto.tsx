@@ -22,6 +22,7 @@ const TakePhoto = (props: any) => {
     getVideo();
   }, [videoRef]);
 
+  //Start the camera
   const getVideo = () => {
     navigator.mediaDevices
       .getUserMedia({
@@ -42,6 +43,7 @@ const TakePhoto = (props: any) => {
       });
   };
 
+  //Stop the camera
   const stopVideo = () => {
     const video = videoRef.current;
 
@@ -61,6 +63,7 @@ const TakePhoto = (props: any) => {
     }
   };
 
+  //Capture photo automatically
   const capture = useCallback(() => {
     let imgUrl: string = "";
     let video = videoRef.current;
@@ -89,6 +92,7 @@ const TakePhoto = (props: any) => {
     }, 1500);
   }, [videoRef, props.setImgSrc, intervalId]);
 
+  //Send the photo to api and validate
   const validatePhoto = (imgUrl: string) => {
     api(imgUrl).then((data: string) => {
       if (data === "Approved") {
@@ -123,7 +127,7 @@ const TakePhoto = (props: any) => {
           <img src={alert} alt="Alert" />
           Room lighting is too low
         </p>
-        <Link to="/" className=" cancel " title="Home l" onClick={stopVideo}>
+        <Link to="/" className=" cancel " title="ScanID" onClick={stopVideo}>
           Cancel
         </Link>
       </div>

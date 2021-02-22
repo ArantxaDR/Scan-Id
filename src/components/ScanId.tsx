@@ -16,6 +16,7 @@ export default function ScanID(props: any) {
     evaluatePictureStatus();
   });
 
+  //Evaluate Status and add css
   const evaluatePictureStatus = () => {
     if (props.pictureStatus === "") {
       setLinkCss("link");
