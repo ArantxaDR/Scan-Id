@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 import "../styles/App.scss";
 import "../styles/_ScanID.scss";
 import check from "../styles/assets/check.svg";
@@ -64,6 +65,7 @@ export default function ScanID(props: any) {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

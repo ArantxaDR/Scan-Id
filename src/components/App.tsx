@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import ScanID from "./ScanId";
 import TakePhoto from "./TakePhoto";
+
 import idBg from "../styles/assets/IDbg.svg";
 
 function App() {
