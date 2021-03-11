@@ -12,8 +12,6 @@ This was a test for Z1 digital. I've created an app wich verify an ID through we
 
 ## Screenshots
 
-![ScanID](./screenshots/ScanID.png)
-
 ![Rejected](./screenshots/Rejected.png)
 
 ![Accepted](./screenshots/Accepted.png)
